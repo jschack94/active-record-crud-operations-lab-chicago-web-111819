@@ -1,10 +1,3 @@
-# Replace the '__' in the below methods to to make the specs pass!
-# Each '__' corresponds to a single line of code you will need to write.
-# See the example below on the left and how it should look on the right.
-# def make_a_new_movie_instance    # def make_a_new_movie_instance
-#   movie = __                     #   movie = Movie.new
-# end                              # end
-
 def can_be_instantiated_and_then_saved
   movie = Movie.new
   movie.title = "This is a title."
@@ -55,14 +48,13 @@ end
 
 def can_find_using_where_clause_and_be_sorted
   Movie.where("release_date > 2002").order(release_date: :desc)
-  __
 end
 
 def can_be_found_updated_and_saved
   movie = Movie.create(title: "Awesome Flick")
- movie = Movie.find_by(title:"Awesome Flick")
- movie.update(title: "Even Awesomer Flick")
- movie.save
+  movie = Movie.find_by(title:"Awesome Flick")
+  movie.update(title: "Even Awesomer Flick")
+  movie.save
 end
 
 def can_update_using_update_method
